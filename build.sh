@@ -3,7 +3,10 @@
 set -e
 
 APP_NAME="SSH Baddie"
-VERSION="1.0.0"
+APP_PATH="build/macos/Build/Products/Release/${APP_NAME}.app"
+
+# Your Developer ID - find with: security find-identity -v -p codesigning
+DEVELOPER_ID="Developer ID Application: Moulaye Abderrahmane Eli Mbitaleb (UC5F79548R)"
 
 echo "🚀 Building and packaging ${APP_NAME}..."
 
@@ -45,7 +48,22 @@ flutter build macos --release
 
 # Step 3: Copy backend to app bundle
 echo "3️⃣  Bundling backend..."
-mkdir -p "build/macos/Build/Products/Release/${APP_NAME}.app/Contents/Resources"
-cp ./ssh-backend/build/ssh-backend \
-   "build/macos/Build/Products/Release/${APP_NAME}.app/Contents/Resources/"
-chmod +x "build/macos/Build/Products/Release/${APP_NAME}.app/Contents/Resources/ssh-backend"
+mkdir -p "${APP_PATH}/Contents/Resources"
+cp ./ssh-backend/build/ssh-backend "${APP_PATH}/Contents/Resources/"
+chmod +x "${APP_PATH}/Contents/Resources/ssh-backend"
+
+# Step 4: Sign the backend binary first
+echo "4️⃣  Signing backend binary..."
+codesign --force --options runtime --sign "${DEVELOPER_ID}" \
+  "${APP_PATH}/Contents/Resources/ssh-backend"
+
+# Step 5: Re-sign the entire app
+echo "5️⃣  Signing app bundle..."
+codesign --force --deep --options runtime --sign "${DEVELOPER_ID}" \
+  "${APP_PATH}"
+
+# Step 6: Verify signature
+echo "6️⃣  Verifying signature..."
+codesign --verify --verbose "${APP_PATH}"
+
+echo "✅ Build complete: ${APP_PATH}"
