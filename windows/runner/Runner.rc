@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "net.camelcodes" "\0"
-            VALUE "FileDescription", "ssh_baddie" "\0"
+            VALUE "FileDescription", "sshbaddie" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "ssh_baddie" "\0"
+            VALUE "InternalName", "sshbaddie" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 net.camelcodes. All rights reserved." "\0"
-            VALUE "OriginalFilename", "ssh_baddie.exe" "\0"
-            VALUE "ProductName", "ssh_baddie" "\0"
+            VALUE "OriginalFilename", "sshbaddie.exe" "\0"
+            VALUE "ProductName", "sshbaddie" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

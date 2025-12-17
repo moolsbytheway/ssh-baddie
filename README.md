@@ -107,7 +107,7 @@ flutter run -d macos
 The Flutter app automatically discovers the backend port using the following priority:
 
 1. **Environment variable** - Set `SSH_BACKEND_PORT` to specify a custom port
-2. **Port file** - Reads from `~/.ssh_baddie_port` if it exists
+2. **Port file** - Reads from `~/.sshbaddie_port` if it exists
 3. **Default port** - Falls back to `8822`
 
 **Using environment variable:**
@@ -117,7 +117,7 @@ SSH_BACKEND_PORT=9000 flutter run -d macos
 
 **Using port file:**
 ```bash
-echo "9000" > ~/.ssh_baddie_port
+echo "9000" > ~/.sshbaddie_port
 flutter run -d macos
 ```
 
@@ -244,7 +244,7 @@ The backend is bundled inside the app bundle at `Contents/Resources/ssh-backend`
 
 #### Port Selection
 
-When launched by the app, the backend automatically finds an available port and writes it to `~/.ssh_baddie_port`. The Flutter app reads this file to discover the backend URL.
+When launched by the app, the backend automatically finds an available port and writes it to `~/.sshbaddie_port`. The Flutter app reads this file to discover the backend URL.
 
 For manual/development usage:
 ```bash

@@ -8,7 +8,7 @@
 PRODUCT_NAME = SSH Baddie
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = net.camelcodes.ssh_baddie
+PRODUCT_BUNDLE_IDENTIFIER = net.camelcodes.sshbaddie
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2025 net.camelcodes. All rights reserved.

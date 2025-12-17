@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:ssh_baddie/theme/app_theme.dart';
+import 'package:sshbaddie/theme/app_theme.dart';
 import 'package:xterm/xterm.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'dart:convert';

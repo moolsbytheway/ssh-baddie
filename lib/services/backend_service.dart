@@ -117,7 +117,7 @@ class BackendService {
       }
     }
     // Also check environment variable
-    final envPort = Platform.environment['SSH_BADDIE_PORT'];
+    final envPort = Platform.environment['sshbaddie_PORT'];
     if (envPort != null) {
       return int.tryParse(envPort);
     }

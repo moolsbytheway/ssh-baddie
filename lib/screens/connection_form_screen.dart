@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ssh_baddie/theme/app_theme.dart';
+import 'package:sshbaddie/theme/app_theme.dart';
 import 'package:uuid/uuid.dart';
 import '../models/ssh_connection.dart';
 import '../providers/connection_provider.dart';

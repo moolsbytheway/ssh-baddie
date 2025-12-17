@@ -53,3 +53,4 @@ rm -rf "$DMG_DIR"
 
 echo "✅ DMG created: $DMG_OUTPUT"
 echo "📏 Size: $(du -h "$DMG_OUTPUT" | cut -f1)"
+

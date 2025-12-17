@@ -2,8 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ssh_baddie/screens/workspace_screen.dart';
-import 'package:ssh_baddie/theme/app_theme.dart';
+import 'package:sshbaddie/screens/workspace_screen.dart';
+import 'package:sshbaddie/theme/app_theme.dart';
 import 'package:uuid/uuid.dart';
 import '../providers/connection_provider.dart';
 import '../providers/theme_provider.dart';
